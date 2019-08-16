@@ -6,7 +6,11 @@
 
     <groupId>com.chenjianwen</groupId>
     <artifactId>authority-management</artifactId>
+    <packaging>pom</packaging>
     <version>20190816</version>
+    <modules>
+        <module>authority-web</module>
+    </modules>
 
 
 </project>
