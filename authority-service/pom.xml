@@ -13,5 +13,17 @@
 
     <artifactId>authority-service</artifactId>
 
-
+    <dependencies>
+        <!-- 引入其他模块 -->
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-api</artifactId>
+            <version>20190816</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-dal</artifactId>
+            <version>20190816</version>
+        </dependency>
+    </dependencies>
 </project>

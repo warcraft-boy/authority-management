@@ -29,6 +29,23 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- 引入其他模块 -->
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-api</artifactId>
+            <version>20190816</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-dal</artifactId>
+            <version>20190816</version>
+        </dependency>
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-service</artifactId>
+            <version>20190816</version>
+        </dependency>
     </dependencies>
 
     <build>
