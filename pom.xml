@@ -8,9 +8,46 @@
     <artifactId>authority-management</artifactId>
     <packaging>pom</packaging>
     <version>20190816</version>
+
     <modules>
         <module>authority-web</module>
+        <module>authority-api</module>
+        <module>authority-service</module>
+        <module>authority-dal</module>
     </modules>
 
+    <properties>
+        <spirng.version></spirng.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>META-INF/resources</targetPath>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
 
 </project>
