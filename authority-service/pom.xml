@@ -25,5 +25,10 @@
             <artifactId>authority-dal</artifactId>
             <version>20190816</version>
         </dependency>
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-common</artifactId>
+            <version>20190816</version>
+        </dependency>
     </dependencies>
 </project>

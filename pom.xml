@@ -14,6 +14,7 @@
         <module>authority-api</module>
         <module>authority-service</module>
         <module>authority-dal</module>
+        <module>authority-common</module>
     </modules>
 
     <properties>
