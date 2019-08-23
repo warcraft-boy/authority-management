@@ -1,5 +1,7 @@
 package com.chenjianwen.web;
 
+import com.chenjianwen.JsonData;
+import com.chenjianwen.exceptions.PermissionException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,8 +18,9 @@ public class WebApplication {
 
     @RequestMapping("/index")
     @ResponseBody
-    public String index(){
+    public JsonData index(){
         log.info("hello");
-        return "hello world";
+        throw new RuntimeException("test exception");
+        //return JsonData.success("hello world");
     }
 }

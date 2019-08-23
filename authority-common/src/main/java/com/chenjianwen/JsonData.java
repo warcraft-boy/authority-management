@@ -3,6 +3,9 @@ package com.chenjianwen;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * @Description: 返回响应数据
  * @Date: Created in 2019/8/22 <br>
@@ -45,6 +48,12 @@ public class JsonData<T> {
         return jsonData;
     }
 
+    public static <T> JsonData<T> success(String msg) {
+        JsonData jsonData = new JsonData(true);
+        jsonData.msg = msg;
+        return jsonData;
+    }
+
     public static <T> JsonData<T> success() {
         JsonData jsonData = new JsonData(true);
         return jsonData;
@@ -63,4 +72,11 @@ public class JsonData<T> {
         return jsonData;
     }
 
+    public Map<String,Object> toMap(){
+        HashMap<String,Object> result = new HashMap<String,Object>();
+        result.put("success",this.success);
+        result.put("msg",this.msg);
+        result.put("data",data);
+        return result;
+    }
 }
