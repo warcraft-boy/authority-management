@@ -24,7 +24,7 @@ public class SpringExceptionResolver implements HandlerExceptionResolver{
         String defaultMsg = "system error";
         //'.json', '.page'
         if(url.endsWith(".json")){  //要求项目中所有请求json数据，都是用".json"结尾
-            if(ex instanceof PermissionException){
+            if(ex instanceof PermissionException || ex instanceof ParamException){
                 JsonData result = JsonData.fail(ex.getMessage());
                 mv = new ModelAndView("jsonView",result.toMap());
             }else{
