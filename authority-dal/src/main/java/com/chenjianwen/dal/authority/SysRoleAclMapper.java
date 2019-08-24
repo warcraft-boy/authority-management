@@ -1,17 +1,17 @@
 package com.chenjianwen.dal.authority;
 
-import com.chenjianwen.api.authority.SysRoleAcl;
+import com.chenjianwen.api.authority.po.SysRoleAcl;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SysRoleAclMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(SysRoleAcl record);
 
     int insertSelective(SysRoleAcl record);
 
-    SysRoleAcl selectByPrimaryKey(Long id);
+    SysRoleAcl selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(SysRoleAcl record);
 

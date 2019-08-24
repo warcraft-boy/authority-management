@@ -1,37 +1,27 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
 
 import java.util.Date;
 
-public class SysAclModule {
+public class SysRole {
     /**
-     * 权限模块主键
+     *角色id
      */
-    private Long id;
+    private Integer id;
 
     /**
-     *权限名称
+     *角色名称
      */
     private String name;
 
     /**
-     *上级权限模块id
+     *角色类型（1管理员，2其他）
      */
-    private Integer parentId;
+    private Integer type;
 
     /**
-     *权限模块层级
-     */
-    private String level;
-
-    /**
-     *状态（1正常，0冻结，2删除）
+     *状态（1可用，2冻结）
      */
     private Integer status;
-
-    /**
-     *权限模块在当前层级下的顺序，由小到大
-     */
-    private Integer seq;
 
     /**
      *备注
@@ -53,11 +43,11 @@ public class SysAclModule {
      */
     private String operateIp;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -69,20 +59,12 @@ public class SysAclModule {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getParentId() {
-        return parentId;
+    public Integer getType() {
+        return type;
     }
 
-    public void setParentId(Integer parentId) {
-        this.parentId = parentId;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level == null ? null : level.trim();
+    public void setType(Integer type) {
+        this.type = type;
     }
 
     public Integer getStatus() {
@@ -91,14 +73,6 @@ public class SysAclModule {
 
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    public Integer getSeq() {
-        return seq;
-    }
-
-    public void setSeq(Integer seq) {
-        this.seq = seq;
     }
 
     public String getRemark() {

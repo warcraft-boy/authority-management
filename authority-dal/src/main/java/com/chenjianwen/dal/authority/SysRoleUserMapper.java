@@ -1,17 +1,17 @@
 package com.chenjianwen.dal.authority;
 
-import com.chenjianwen.api.authority.SysRoleUser;
+import com.chenjianwen.api.authority.po.SysRoleUser;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SysRoleUserMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(SysRoleUser record);
 
     int insertSelective(SysRoleUser record);
 
-    SysRoleUser selectByPrimaryKey(Long id);
+    SysRoleUser selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(SysRoleUser record);
 

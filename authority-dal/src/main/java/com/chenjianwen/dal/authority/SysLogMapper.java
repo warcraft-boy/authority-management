@@ -1,17 +1,17 @@
 package com.chenjianwen.dal.authority;
 
-import com.chenjianwen.api.authority.SysLog;
+import com.chenjianwen.api.authority.po.SysLog;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SysLogMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(SysLog record);
 
     int insertSelective(SysLog record);
 
-    SysLog selectByPrimaryKey(Long id);
+    SysLog selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(SysLog record);
 

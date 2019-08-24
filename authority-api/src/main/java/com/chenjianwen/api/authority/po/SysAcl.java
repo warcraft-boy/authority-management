@@ -1,4 +1,4 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ public class SysAcl {
     /**
      * 权限主键
      */
-    private Long id;
+    private Integer id;
 
     /**
      * 权限码
@@ -63,11 +63,11 @@ public class SysAcl {
      */
     private String operateIp;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

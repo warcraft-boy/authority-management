@@ -13,5 +13,11 @@
 
     <artifactId>authority-api</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.chenjianwen</groupId>
+            <artifactId>authority-common</artifactId>
+            <version>20190816</version>
+        </dependency>
+    </dependencies>
 </project>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chenjianwen.dal.authority.SysUserMapper" >
-  <resultMap id="BaseResultMap" type="com.chenjianwen.api.authority.SysUser" >
-    <id column="id" property="id" jdbcType="BIGINT" />
+  <resultMap id="BaseResultMap" type="com.chenjianwen.api.authority.po.SysUser" >
+    <id column="id" property="id" jdbcType="INTEGER" />
     <result column="user_name" property="userName" jdbcType="VARCHAR" />
     <result column="telphone" property="telphone" jdbcType="VARCHAR" />
     <result column="mail" property="mail" jdbcType="VARCHAR" />
@@ -22,23 +22,23 @@
     select 
     <include refid="Base_Column_List" />
     from sys_user
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from sys_user
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.chenjianwen.api.authority.SysUser" >
+  <insert id="insert" parameterType="com.chenjianwen.api.authority.po.SysUser" >
     insert into sys_user (id, user_name, telphone, 
       mail, password, dept_id, 
       status, remark, operator, 
       operate_time, operate_ip)
-    values (#{id,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR},
       #{mail,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{deptId,jdbcType=INTEGER}, 
       #{status,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{operator,jdbcType=VARCHAR}, 
       #{operateTime,jdbcType=TIMESTAMP}, #{operateIp,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.chenjianwen.api.authority.SysUser" >
+  <insert id="insertSelective" parameterType="com.chenjianwen.api.authority.po.SysUser" >
     insert into sys_user
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -77,7 +77,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
-        #{id,jdbcType=BIGINT},
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="userName != null" >
         #{userName,jdbcType=VARCHAR},
@@ -111,7 +111,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.chenjianwen.api.authority.SysUser" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.chenjianwen.api.authority.po.SysUser" >
     update sys_user
     <set >
       <if test="userName != null" >
@@ -145,9 +145,9 @@
         operate_ip = #{operateIp,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.chenjianwen.api.authority.SysUser" >
+  <update id="updateByPrimaryKey" parameterType="com.chenjianwen.api.authority.po.SysUser" >
     update sys_user
     set user_name = #{userName,jdbcType=VARCHAR},
       telphone = #{telphone,jdbcType=VARCHAR},
@@ -159,6 +159,6 @@
       operator = #{operator,jdbcType=VARCHAR},
       operate_time = #{operateTime,jdbcType=TIMESTAMP},
       operate_ip = #{operateIp,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

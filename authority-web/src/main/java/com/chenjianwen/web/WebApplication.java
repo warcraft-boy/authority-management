@@ -1,20 +1,16 @@
 package com.chenjianwen.web;
 
 import com.chenjianwen.JsonData;
-import com.chenjianwen.api.authority.SysAclModule;
+import com.chenjianwen.api.authority.po.SysAclModule;
 import com.chenjianwen.dal.authority.SysAclModuleMapper;
-import com.chenjianwen.exceptions.PermissionException;
 import com.chenjianwen.utils.ApplicationContextHelper;
 import com.chenjianwen.utils.BeanValidator;
 import com.chenjianwen.utils.JsonUtils;
 import com.chenjianwen.web.test.TestVo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections.MapUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import java.util.Map;
 
 /**
  * @Description: <br>
@@ -38,7 +34,7 @@ public class WebApplication {
     public JsonData validate(TestVo vo){
         log.info("validate");
         SysAclModuleMapper sysAclModuleMapper = ApplicationContextHelper.popBean(SysAclModuleMapper.class);
-        SysAclModule sysAclModule = sysAclModuleMapper.selectByPrimaryKey(1L);
+        SysAclModule sysAclModule = sysAclModuleMapper.selectByPrimaryKey(1);
         log.info(JsonUtils.obj2String(sysAclModule));
         BeanValidator.check(vo);
 //        try {

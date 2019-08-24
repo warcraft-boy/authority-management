@@ -1,37 +1,27 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
 
 import java.util.Date;
 
-public class SysUser {
+public class SysAclModule {
     /**
-     *主键
+     * 权限模块主键
      */
-    private Long id;
+    private Integer id;
 
     /**
-     *用户名
+     *权限名称
      */
-    private String userName;
+    private String name;
 
     /**
-     *手机号
+     *上级权限模块id
      */
-    private String telphone;
+    private Integer parentId;
 
     /**
-     *邮箱
+     *权限模块层级
      */
-    private String mail;
-
-    /**
-     *密码
-     */
-    private String password;
-
-    /**
-     *部门id
-     */
-    private Integer deptId;
+    private String level;
 
     /**
      *状态（1正常，0冻结，2删除）
@@ -39,12 +29,17 @@ public class SysUser {
     private Integer status;
 
     /**
+     *权限模块在当前层级下的顺序，由小到大
+     */
+    private Integer seq;
+
+    /**
      *备注
      */
     private String remark;
 
     /**
-     *操作者
+     *操作员
      */
     private String operator;
 
@@ -58,52 +53,36 @@ public class SysUser {
      */
     private String operateIp;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public String getTelphone() {
-        return telphone;
+    public Integer getParentId() {
+        return parentId;
     }
 
-    public void setTelphone(String telphone) {
-        this.telphone = telphone == null ? null : telphone.trim();
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
     }
 
-    public String getMail() {
-        return mail;
+    public String getLevel() {
+        return level;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail == null ? null : mail.trim();
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
-    }
-
-    public Integer getDeptId() {
-        return deptId;
-    }
-
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
+    public void setLevel(String level) {
+        this.level = level == null ? null : level.trim();
     }
 
     public Integer getStatus() {
@@ -112,6 +91,14 @@ public class SysUser {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public Integer getSeq() {
+        return seq;
+    }
+
+    public void setSeq(Integer seq) {
+        this.seq = seq;
     }
 
     public String getRemark() {

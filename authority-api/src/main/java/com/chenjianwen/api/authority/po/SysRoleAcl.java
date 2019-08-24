@@ -1,10 +1,10 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
 
 public class SysRoleAcl {
     /**
      *主键
      */
-    private Long id;
+    private Integer id;
 
     /**
      *角色id
@@ -31,11 +31,11 @@ public class SysRoleAcl {
      */
     private String operateIp;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

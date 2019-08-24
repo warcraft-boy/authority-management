@@ -1,4 +1,4 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
 
 import java.util.Date;
 
@@ -6,7 +6,7 @@ public class SysLog {
     /**
      *主键
      */
-    private Long id;
+    private Integer id;
 
     /**
      *权限更新类型（1部门，2用户，3权限模块，4权限，5角色，6角色用户关系，7角色权限关系）
@@ -48,11 +48,11 @@ public class SysLog {
      */
     private Integer status;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -1,12 +1,22 @@
-package com.chenjianwen.api.authority;
+package com.chenjianwen.api.authority.po;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 
+
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class SysDept {
     /**
      *部门id
      */
-    private Long id;
+    private Integer id;
 
     /**
      *部门名称
@@ -48,11 +58,11 @@ public class SysDept {
      */
     private String operateIp;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

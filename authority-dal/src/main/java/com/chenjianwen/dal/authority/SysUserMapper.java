@@ -1,17 +1,17 @@
 package com.chenjianwen.dal.authority;
 
-import com.chenjianwen.api.authority.SysUser;
+import com.chenjianwen.api.authority.po.SysUser;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SysUserMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(SysUser record);
 
     int insertSelective(SysUser record);
 
-    SysUser selectByPrimaryKey(Long id);
+    SysUser selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(SysUser record);
 

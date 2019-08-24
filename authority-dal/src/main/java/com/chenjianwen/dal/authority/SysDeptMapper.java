@@ -1,17 +1,17 @@
 package com.chenjianwen.dal.authority;
 
-import com.chenjianwen.api.authority.SysDept;
+import com.chenjianwen.api.authority.po.SysDept;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SysDeptMapper {
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(SysDept record);
 
     int insertSelective(SysDept record);
 
-    SysDept selectByPrimaryKey(Long id);
+    SysDept selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(SysDept record);
 
