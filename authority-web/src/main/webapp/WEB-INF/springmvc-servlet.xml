@@ -20,6 +20,7 @@
     <!-- 启动包扫描功能 -->
     <context:component-scan base-package="com.chenjianwen"/>
 
+    <bean id="applicationContextHelper" class="com.chenjianwen.utils.ApplicationContextHelper" lazy-init="false"/>
     <bean id="springExceptionResolver" class="com.chenjianwen.exceptions.SpringExceptionResolver"/>
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
     <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
