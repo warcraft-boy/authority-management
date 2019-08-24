@@ -24,6 +24,6 @@ public class TestVo {
     @NotNull
     private Integer id;
 
-    @NotEmpty
+    //@NotEmpty
     private List<String> list;
 }
